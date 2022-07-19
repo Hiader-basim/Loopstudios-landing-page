@@ -1,0 +1,279 @@
+:root {
+    --White: hsl(0, 0%, 100%);
+    --Black: hsl(0, 0%, 0%);
+    --Dark-Gray: hsl(0, 0%, 55%);
+    --Very-Dark-Gray: hsl(0, 0%, 41%);
+}
+/* start navbar */
+.navbar{
+    height: 100px;
+    z-index: 2;
+}
+.navaction ul li{
+    font-family: 'Alata', sans-serif;
+    position: relative;
+    overflow: hidden;
+}
+.navaction ul li a {
+    font-size: 18px;
+}
+.navaction ul li::before{
+    content: '';
+    width: 90%;
+    height: 2px;
+    background-color: var(--White);
+    position: absolute;
+    bottom: 0;
+    left: -100%;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+.navaction ul li:hover::before{
+    left: 0;
+}
+@media (max-width:768px) {
+    .navbar1{
+        height: 100%;
+        background-color: var(--Black);
+        overflow: hidden;
+        transition: 0.3s;
+        -webkit-transition: 0.3s;
+        -moz-transition: 0.3s;
+        -ms-transition: 0.3s;
+        -o-transition: 0.3s;
+}
+    .navaction1{
+        position: absolute;
+        top: 30%;
+        font-size: 30px;
+        width: 100%;
+        left: 0;
+        transition: 0.3s;
+            -webkit-transition: 0.3s;
+            -moz-transition: 0.3s;
+            -ms-transition: 0.3s;
+            -o-transition: 0.3s;
+    }
+    .navaction1 li{
+        margin-bottom: 2rem ;
+        font-family: 'Josefin Sans', sans-serif;
+    }
+    .navaction2{
+        left: -100%;
+        position: absolute;
+    }
+    .close{
+        display: none;
+    }
+}
+/* end navbar */
+/* start landing */
+.landing{
+    height: 100vh;
+    background-image: url("../images/desktop/image-hero.jpg");
+    background-position: center;
+    background-size: cover;
+}
+@media (max-width:768px){
+    .landing{
+        background-image: url("../images/mobile/image-hero.jpg");
+    }
+}
+.overlayer{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0,40%);
+}
+.landing .box{
+    font-family: 'Josefin Sans', sans-serif;
+    position: absolute;
+    color: var(--White);
+    width: 40%;
+    border: 1px solid white;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+}
+.landing .box h1{
+    font-size: 57px;
+}
+@media (max-width:768px) {
+    .landing .box{
+        width: 90%;
+    }
+    .landing .box h1{
+        font-size: 30px;
+    }
+}
+/* end landing */
+/* start interactive */
+.interactive h1{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 34px;
+    padding-left: 75px;
+}
+.interactive p{
+    padding-left: 75px;
+    font-family: 'Alata', sans-serif;
+}
+.interactive .box{
+    width: 50%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+@media (max-width:768px) {
+    .interactive h1{
+        font-size: 33px;
+        padding-left: 0;
+    }
+    .interactive .box{
+        position: relative;
+        width: 100%;
+    }
+    .interactive .box .cont{
+        text-align: center;
+    }
+    .interactive p{
+        padding-left: 0;
+    }
+}
+/* end interactive */
+/* start Our-creations */
+.Our-creations .title{
+    font-family: 'Josefin Sans', sans-serif;
+}
+@media (max-width:768px) {
+    .Our-creations .title{
+        flex-direction: column;
+    }
+}
+.Our-creations .title button{
+    background-color: var(--White);
+    padding: 10px 35px;
+    border: 1px solid black;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+.Our-creations .title button:hover{
+    background-color: var(--Black);
+    color: var(--White);
+}
+.Our-creations .box{
+    overflow:hidden ;
+    cursor: pointer;
+}
+.Our-creations .box::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+    bottom: -100%;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+.Our-creations .box:hover::before{
+    bottom: 0;
+}
+.Our-creations .box .cont{
+    position: absolute;
+    color: var(--White);
+    bottom: 0;
+    left: 10%;
+    font-family: 'Josefin Sans', sans-serif;
+}
+.Our-creations .box:hover h1{
+    color: black;
+}
+.Our-creations .box h1{
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+.img2{
+    display: none;
+}
+@media (max-width:768px) {
+    .img1{
+        display: none;
+    }
+    .img2{
+        display: block;
+    }
+}
+/* end Our-creations */
+/* start footer */
+.footer .box1 li{
+    cursor: pointer;
+    padding: 0 10px;
+    position: relative;
+    overflow: hidden;
+    padding: 1rem;
+}
+.footer .box2 li{
+    cursor: pointer;
+    padding: 0 10px;
+    position: relative;
+    overflow: hidden;
+    padding: 1rem;
+    color: white;
+}
+.footer .box1 li::before{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: var(--White);
+    bottom: 0;
+    left: -100%;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+.footer .box2 li::before{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: var(--White);
+    bottom: 0;
+    left: -100%;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+.footer .box1 li:hover::before{
+    left: 0;
+}
+.footer .box2 li:hover::before{
+    left: 0;
+}
+@media (max-width:768px) {
+    .footer .box1,.footer .box2{
+        flex-direction: column;
+    }
+    .footer .box2 ul{
+        flex-direction: column;
+    }
+}
+/* end footer */
